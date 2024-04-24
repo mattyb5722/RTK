@@ -1,0 +1,18 @@
+:host {
+  display: block;
+}
+
+.search-bar-container {
+  background: #eaf1fb;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+
+  > input {
+    font-size: 1.1rem;
+    outline: none;
+    border: none;
+    background: inherit;
+    width: 90%;
+  }
+}

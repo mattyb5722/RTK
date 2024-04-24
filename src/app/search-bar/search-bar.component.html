@@ -1,0 +1,6 @@
+<span class="search-bar-container">
+  <button mat-icon-button (click)="search(inputElement.value)">
+    <mat-icon>search</mat-icon>
+  </button>
+  <input #inputElement placeholder="Search" (keyup.enter)="search(inputElement.value)"/>
+</span>

@@ -1,0 +1,22 @@
+<mat-card class="event-details-card">
+  <mat-card-header class="event-details-header">
+    <app-date [date]="event.startDate"></app-date>
+    <div class="event-details-title">
+      <mat-card-title>{{ event.name }}</mat-card-title>
+      <mat-card-subtitle *ngFor="let venue of event.venues">{{venue.toString()}}</mat-card-subtitle>
+    </div>
+  </mat-card-header>
+
+  <mat-card-content class="event-details-content">
+    <img mat-card-image src="{{event.pictureUrls[0]}}" width="200" height="112" alt="Event Picture">
+    <mat-list class="event-details-list">
+      <mat-list-item *ngIf="event.performers?.length">
+        <div matListItemTitle>Performer(s)</div>
+        <div matListItemLine *ngFor="let performer of event.performers">{{performer}}</div>
+      </mat-list-item>
+      <mat-list-item>
+        <a href="{{event.eventUrl}}">More Information</a>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

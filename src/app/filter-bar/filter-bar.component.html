@@ -1,0 +1,7 @@
+<div class="filter-bar-container">
+  <mat-select [(value)]="selectedFilterOption" (selectionChange)="inputElement.value=''; filter(inputElement.value)">
+    <mat-option *ngFor="let option of filterOptions" [value]="option.value">{{option.viewValue}}</mat-option>
+  </mat-select>
+
+  <input #inputElement (input)="filter(inputElement.value)" placeholder="Filter"/>
+</div>

@@ -1,0 +1,21 @@
+<mat-toolbar class="search-bar">
+  <app-search-bar (searchEmitter)="search($event)"></app-search-bar>
+</mat-toolbar>
+
+<div *ngIf="events.length > 0">
+  <mat-toolbar class="filter-bar">
+    <app-filter-bar [filterOptions]="filterOptions" (filterEmitter)="filterParams = $event"></app-filter-bar>
+  </mat-toolbar>
+  <div class="event-details-list">
+    <app-event-details *ngFor="let event of events | filterBarPipe: filterParams" [event]="event" class="event-details-item"></app-event-details>
+  </div>
+
+  <mat-paginator
+    (page)="handlePageEvent($event)"
+    [length]="length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions"
+    [pageIndex]="pageIndex"
+  ></mat-paginator>
+</div>
+

@@ -1,0 +1,26 @@
+.event-details-card {
+  width: 400px;
+}
+
+.event-details-header {
+  display: flex;
+  padding: 0;
+}
+
+.event-details-title {
+  align-content: center;
+  padding-right: 10px
+}
+
+.event-details-content {
+  display: flex;
+}
+
+.event-details-list {
+  margin-top: -15px;
+}
+
+.event-details-list mat-list-item div {
+  text-wrap: balance;
+}
+

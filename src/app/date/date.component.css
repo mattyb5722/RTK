@@ -1,0 +1,13 @@
+.date-container {
+  padding: 10px;
+}
+
+.date-month {
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.date-day {
+  font-size: 23px;
+  line-height: 1;
+}
